@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-build:
-	make -C app build
-
-run-dist:
-	make -C app run-dist
-=======
 .DEFAULT_GOAL := build-run
 
 clean:
@@ -21,7 +14,6 @@ run-dist:
 
 run:
 	make -C app run
->>>>>>> e600732 (add .gitignore and Makefile)
 
 test:
 	make -C app test
@@ -32,9 +24,6 @@ report:
 lint:
 	make -C app lint
 
-<<<<<<< HEAD
-.PHONY: build
-=======
 update-deps:
 	make -C app update-deps
 
@@ -42,4 +31,3 @@ update-deps:
 build-run: build run
 
 .PHONY: build
->>>>>>> e600732 (add .gitignore and Makefile)
