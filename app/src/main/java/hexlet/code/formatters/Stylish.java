@@ -6,7 +6,8 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Stylish {
-    public static String formatStylish(Map <String, Object> file1, Map <String, Object> file2, String format) throws Exception {
+    public static String formatStylish(Map<String, Object> file1,
+                                       Map<String, Object> file2, String format) throws Exception {
 
         Set<String> keysFromFile = new TreeSet<>(file1.keySet());
         keysFromFile.addAll(file2.keySet());
@@ -18,7 +19,8 @@ public class Stylish {
             } else if (!file1.containsKey(key) && (file2.containsKey((key)))) {
                 result += String.format("   + " + key + ": " + file2.get(key)) + "\n";
             } else if (!Objects.equals(file1.get(key), file2.get(key))) {
-                result += String.format("   - " + key + ": " + file1.get(key) + "\n" + "   + " + key + ": " + file2.get(key)) + "\n";
+                result += String.format("   - " + key + ": " + file1.get(key)
+                        + "\n" + "   + " + key + ": " + file2.get(key)) + "\n";
             } else {
                 result += String.format("     " + key + ": " + file1.get(key)) + "\n";
             }
