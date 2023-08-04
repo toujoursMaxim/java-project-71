@@ -10,7 +10,7 @@ install:
 	./gradlew clean install
 
 run-dist:
-	./build/install/java-package/bin/java-package
+	./build/install/app/bin/app src/main/resources/file1.json src/main/resources/file2.json
 
 run:
 	./gradlew run
